@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/adcdf23364.js" crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="navbar navbar-light bg-light justify-content-between">
+            <a class="navbar-brand">{{request.user}}</a>
+            <div class="button">
+                <a href="{% url 'apply'  %}"><button class="btn btn-outline-success my-2 my-sm-0">Go back</button></a>
+            <a href="{% url 'signout'  %}"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Signout</button></a>
+            </div>
+          </nav>
+
+    </div>
+    {% csrf_token %}
+    <div class="flex">
+        <div class="form">
+            <div class="image"><img src="{% static 'media/profile.png'%}" alt=""></div>
+              <div class="name"><p>{{application.name}}</p></div>
+              <div class="detail">
+                <div class="email"><label for="">Email : </label><p>{{application.email}}</p></div>
+                <div class="phone"><label for="">Phone number :</label><p>{{application.phone}}</p></div>
+                <div class="address"><label for="">Address : </label><p>{{application.address}}</p></div>
+                <div class="college"><label for="">College : </label><p>{{application.college}}</p></div>
+                <div class="quali"><label for="">Qualification : </label><p>{{application.qualification}}</p></div>
+                <div class="company"><label for="">Company : </label><p>{{application.company}}</p></div>
+                <div class="skill"><label for="">Skills : </label><p>{{application.skill}}</p></div>
+            </div>
+        </div>
+        <div class="det"><img src="{% static 'media/de1.jpg'%}" alt=""></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body{
+    background-image: url('/static/media/job.jpg');
+    background-size: cover;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar{
+    width: 1480px;
+    border-radius: 6px;
+    
+}
+.button{
+    float: right;
+}
+.navbar a{
+    margin-left: 20px;
+}
+.flex{
+    display: flex;
+}
+.form{
+    box-sizing: border-box;
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    margin-left: 60px;
+    margin-top: 50px;
+    border-radius: 15px;
+    text-align: center;
+
+}
+.profile img{
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+}
+.names{
+    margin-top: 10px;
+    
+}
+.links{
+    margin-top: 20px;
+}
+.links a{
+    display: inline-flex;
+    font-size: 20px;
+    padding: 0px 15px;
+}
